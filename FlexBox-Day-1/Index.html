@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice/learning__Flexbox</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        body{
+        body {
             background-color: #4e4d4d;
         }
 
-        header{
+        header {
             text-align: center;
             color: white;
-            /* margin: 30px 0 30px 0; */
+            margin: 30px 0 30px 0;
             font-size: 20px;
             font-family: cinzel
         }
 
-        .container{
-    /* There is "NO" Justify Item in flex-Box */
+        .container {
+            /* There is "NO" Justify Item in flex-Box */
             border: 3px rgb(11, 233, 155) solid;
             display: flex;
             /* align-content: center; */
             height: 80vh;
             flex-wrap: wrap;
-            justify-content: center;
+            /* justify-content: center; */
             /* row-gap: 30px;
             column-gap: 10px; */
+
             gap: 20px 10px;
-    /* In "gap" we can use row as well as column gap */
-            align-items: center;
+            /* In "gap" we can use row as well as column gap */
+            /* align-items: center; */
             /* flex-direction: column; */
-    /* align-items is use for single line content ,Where as align-content is use for multiple content lines. */
+            /* align-items is use for single line content ,Where as align-content is use for multiple content lines. */
         }
 
-        .item{
+        .item {
             height: 40px;
             text-align: center;
             width: 40px;
@@ -46,19 +53,25 @@
             background-color: black;
         }
 
-        .order-1{
+        .order-1 {
             /* order: 1; */
         }
+
         /* first flex item in the browser does not have to appear as the first item in the layout */
 
-        .item wrap{
-            flex-wrap: 1;
+        /* .wrap1{
+            flex-grow: 2;
         }
-        /* a flex item will grow relative to the rest of the flex items. */
 
+        .wrap2{
+            flex-grow: 2;
+        } */
+
+        /* a flex item will grow relative to the rest of the flex items. */
     </style>
 
 </head>
+
 <body>
 
     <header>
@@ -68,16 +81,16 @@
     <main>
         <div class="container">
             <div class="item order-1">1</div>
-            <div class="item">2</div>
+            <div class="item wrap1">2</div>
             <div class="item">3</div>
             <div class="item">4</div>
             <div class="item">5</div>
             <div class="item">6</div>
-            <div class="item">7</div>
+            <div class="item wrap2">7</div>
             <div class="item">8</div>
             <div class="item">9</div>
             <div class="item">10</div>
-            <div class="item">11</div>
+            <!-- <div class="item">11</div>
             <div class="item">12</div>
             <div class="item">13</div>
             <div class="item">14</div>
@@ -116,8 +129,9 @@
             <div class="item">47</div>
             <div class="item">48</div>
             <div class="item">49</div>
-            <div class="item">50</div>
+            <div class="item">50</div> -->
         </div>
     </main>
 </body>
+
 </html>
